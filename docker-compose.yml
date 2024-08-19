@@ -8,23 +8,23 @@ services:
     deploy:
       replicas: 3
       
-    train:
-      image: sudesh1209/paytrain:latest
+  train:
+    image: sudesh1209/paytrain:latest
+    ports:
+      - 82:80
+     deploy:
+       replicas: 3
+        
+  recharge:
+      image: sudesh1209/payrecharge:latest
       ports:
-        - 82:80
+        - 83:80
       deploy:
         replicas: 3
-        
-      recharge:
-        image: sudesh1209/payrecharge:latest
-        ports:
-          - 83:80
-        deploy:
-          replicas: 3
           
-        dth:
-          image: sudesh1209/paydth:latest
-          ports:
-            - 84:80
-          deploy:
-            replicas: 3
+   dth:
+      image: sudesh1209/paydth:latest
+      ports:
+         - 84:80
+         deploy:
+         replicas: 3
