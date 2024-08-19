@@ -8,9 +8,9 @@ services:
     deploy:
       replicas: 3
 
-      train:
-      image: sudesh1209/paytrain:latest
-      ports:
-        - 82:80
-      deploy:
-        replicas: 3
+   train:
+     image: sudesh1209/paytrain:latest
+     ports:
+       - 82:80
+    deploy:
+      replicas: 3
