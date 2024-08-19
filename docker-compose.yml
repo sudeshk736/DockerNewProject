@@ -1,16 +1,9 @@
 ---
 version: "3.8"
 services:
-  movies:
-    image: sudesh1209/paymovies:latest
-    ports:
-      - 81:80
-    deploy:
-      replicas: 3
-
-   train:
-     image: sudesh1209/paytrain:latest
-     ports:
-       - 82:80
-    deploy:
-      replicas: 3
+train:
+      image: sudesh1209/paytrain:latest
+      ports:
+        - 82:80
+      deploy:
+        replicas: 3
